@@ -1,0 +1,27 @@
+{
+  "name": "simplemoney",
+  "version": "0.1.0",
+  "description": "A basic banking app for money transction",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masteroes/SimpleMoney.git"
+  },
+  "keywords": [
+    "Banking",
+    "Money",
+    "Transactions"
+  ],
+  "author": "Vishnu Narayan Dubey",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/masteroes/SimpleMoney/issues"
+  },
+  "homepage": "https://github.com/masteroes/SimpleMoney#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
