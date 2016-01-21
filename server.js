@@ -18,8 +18,8 @@ var listener=app.listen(process.env.APP_PORT || 4000,function(){
 var notif=require('./util/util.js');
 
 var mymailOpts = {
-   from: 'neeraj.agg90@gmail.com',
-   to: 'coolbuddy90@gmail.com',
+   from: 'vndbluepi@gmail.com',
+   to: 'neeraj.agg90@gmail.com',
    subject: 'testing notification',
    text : 'Hello Testing notification'
 }
