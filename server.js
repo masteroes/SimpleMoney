@@ -10,3 +10,19 @@ var listener=app.listen(process.env.APP_PORT || 4000,function(){
 	console.log(process.env.APP_PORT)
 	console.log('Listening on port ' + listener.address().port);
 });
+
+
+
+//Code block to require util modul and call send mail 
+
+var notif=require('./util/util.js');
+
+var mymailOpts = {
+   from: 'neeraj.agg90@gmail.com',
+   to: 'coolbuddy90@gmail.com',
+   subject: 'testing notification',
+   text : 'Hello Testing notification'
+}
+
+console.log("Sending mail");
+notif.sendMail(mymailOpts)
