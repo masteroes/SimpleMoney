@@ -13,7 +13,7 @@ var listener=app.listen(process.env.APP_PORT || 4000,function(){
 
 
 
-//Code block to require util modul and call send mail 
+/*Code block to require util modul and call send mail 
 
 var notif=require('./util/util.js');
 
@@ -25,4 +25,7 @@ var mymailOpts = {
 }
 
 console.log("Sending mail");
+
 notif.sendMail(mymailOpts)
+
+console.log(notif.generateOTP());*/

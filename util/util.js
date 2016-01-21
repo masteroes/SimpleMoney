@@ -7,7 +7,7 @@ exports.sendMail = function (opts) {
       service: 'Gmail',
       auth: {
          user: 'vndbluepi@gmail.com',
-         pass: 'P@ssword1234'
+         pass: '<urpass>'
       }
 });
 
@@ -19,16 +19,8 @@ mailOpts = {
    subject: opts.subject,
    text : opts.text
 }
- /*  html: opts.byrom: 'Frblurdybloop.com>', // sender address 
-    to: 'bar@blurdybloop.com, baz@blurdybloop.com', // list of receivers 
-    subject: 'Hello ✔', // Subject line 
-    text: 'Hello world 🐴', // plaintext body 
-    html: '<b>Hello world 🐴</b>' // html body 
-*/
-
-
+ 
 console.log('mailOpts: ', mailOpts);
-
 console.log('Sending Mail');
 // Send mail
 smtpTransport.sendMail(mailOpts, function (error, response) {
@@ -40,5 +32,11 @@ smtpTransport.sendMail(mailOpts, function (error, response) {
    console.log('Closing Transport');
    smtpTransport.close();
    });
-
+}
+exports.generateOTP=function() 
+{
+var random = require("random-js")(); 
+var value = random.integer(100000,999999);
+console.log(value);
+return value.toString();
 }
