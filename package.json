@@ -24,6 +24,7 @@
   "dependencies": {
     "express": "^4.13.3",
     "nodemailer": "^0.7.1",
-    "random-js": "^1.0.8"
+    "random-js": "^1.0.8",
+    "shortid": "^2.2.4"
   }
 }
