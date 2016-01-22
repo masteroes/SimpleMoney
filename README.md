@@ -1,12 +1,13 @@
-#### Running the application
+# Running the application
 
-# Install packages using "npm install" command from project home
+## Make sure your mongo db is running on the default port 27017
+## Install packages using "npm install" command from project home
 
-# Set the environment variable "set APP_PORT=<port>"
-# Start the server "node ."
+## Set the environment variable "set APP_PORT='port'"
+## Start the server "node ."
 
 # User Registration API 
-## URL http://<hostname>:<port>/users/
+## URL http://hostname:port/users/
 ## HTTP Method - POST
 ### Sample Payload username and email is unique
 {
