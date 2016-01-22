@@ -20,11 +20,12 @@ app.post('/login', parseUrlencoded, function(request, response){
 	var myBody = request.body;
 	var userId = myBody.userId;
 	var password = myBody.password;
-	var bool = login.authentication(userId, password);	
-	if(bool){
-		response.json("Login Successful");
-	}
-	else {
-		response.status(201).json("Login Failed");
-	}
+	login.authentication(userId, password, function(bool){	
+		if(bool){
+			response.json("Login Successful");
+		}
+		else {
+			response.status(201).json("Login Failed");
+		}
+	});
 });

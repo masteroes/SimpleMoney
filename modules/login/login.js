@@ -1,19 +1,15 @@
 var mongoose = require('mongoose');
 var Users = require('./model/users');
-var 	flag=false;
 module.exports = {
-
-		authentication : function(userId, pwd) {
+		authentication : function(userId, pwd, callback) {
 			Users.find({username:userId, password:pwd},function(err,user){
-					if(user.length!=0)
+					if(user.length!==0)
 					{
-
-						flag = true;
-						console.log("inside" + flag);
+						callback(true);
 					}
-
+					else {
+						callback(false);
+					}
 			});
-			console.log(flag);
-			return flag;
 		}
 	};
