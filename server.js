@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 var express=require('express');
 var app=express();
 
-var user_routes = require('./userMgmt/routes/users');
-var login_routes = require('./userMgmt/routes/login');
+var user_routes = require('./routes/users');
+var login_routes = require('./routes/login');
 
 
 // DB Connection
