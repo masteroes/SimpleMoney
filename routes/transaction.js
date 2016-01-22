@@ -19,17 +19,14 @@ console.log(req.body);
 			else
 				res.send(transactions);
 		});
-	//validate amount in account
-	//update from account
-	//create tranc1
-	//create trans 2
-});
+	});
 
 
 router.post('/sendmoney', function(req, res) {
 console.log(req.body);
 //get from
 //get to
+//create 2 transactions using create remote method
 
 var tx1 = new transaction(req.body);
 		tx1.save(function(err,transactions){
@@ -38,10 +35,6 @@ var tx1 = new transaction(req.body);
 			else
 				res.send(transactions);
 		});
-	//validate amount in account
-	//update from account
-	//create tranc1
-	//create trans 2
 });
 
 	
