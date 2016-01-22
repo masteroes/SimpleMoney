@@ -2,7 +2,7 @@ var shortid = require('shortid');
 var express=require('express');
 var mongoose=require('mongoose');
 var bodyParser = require('body-parser');
-var AccountModel=require('./model/accountModel.js');
+var AccountModel=require('../model/accountModel.js');
 var app=express();
 mongoose.connect('mongodb://localhost/mydb');
 app.use(bodyParser.urlencoded({ extended: false }));
