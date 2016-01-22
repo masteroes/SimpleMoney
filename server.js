@@ -1,10 +1,10 @@
 var express=require('express');
-var app=express();
 var routes = require('./routes/transaction');
 var login = require('./modules/login/login.js');
 var bodyParser = require('body-parser');
-var parseUrlencoded = bodyParser.urlencoded({extended: false});
 var mongoose = require('mongoose');
+var app=express();
+var parseUrlencoded = bodyParser.urlencoded({extended: false});
 app.use(express.static('public'));
 
 app.use( bodyParser.json());       // to support JSON-encoded bodies
@@ -21,7 +21,7 @@ app.use('/', routes);
 
 
 var listener=app.listen(process.env.APP_PORT || 4000,function(){
-	console.log(process.env.APP_PORT)
+	console.log(process.env.APP_PORT);
 	console.log('Listening on port ' + listener.address().port);
 });
 
