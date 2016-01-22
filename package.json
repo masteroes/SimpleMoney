@@ -23,9 +23,9 @@
   "homepage": "https://github.com/masteroes/SimpleMoney#readme",
   "dependencies": {
     "express": "^4.13.3",
+    "mongoose": "^4.3.6",
     "nodemailer": "^0.7.1",
     "random-js": "^1.0.8",
-    "mongoose": "^4.3.6",
     "shortid": "^2.2.4"
   }
 }
