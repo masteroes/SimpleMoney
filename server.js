@@ -22,8 +22,8 @@ var listener=app.listen(process.env.APP_PORT || 4000,function(){
 var notif=require('./util/util.js');
 
 var mymailOpts = {
-   from: 'vndbluepi@gmail.com',
-   to: 'neeraj.agg90@gmail.com',
+   from: 'loopbacktraining@gmail.com',
+   to: 'loopbacktraining@gmail.com',
    subject: 'testing notification',
    text : 'Hello Testing notification'
 }
