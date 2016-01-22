@@ -1,6 +1,6 @@
 var express=require('express');
 var routes = require('./routes/transaction');
-var login = require('./modules/login/login.js');
+//var login = require('./modules/login/login.js');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var app=express();
@@ -33,4 +33,5 @@ app.use('/', login_routes);
 
 listener=app.listen(process.env.APP_PORT || 4000,function(){
 	console.log(process.env.APP_PORT);
+	console.log("server running on PORT"+listener.address().port );
 });
