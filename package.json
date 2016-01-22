@@ -25,6 +25,7 @@
     "express": "^4.13.3",
     "nodemailer": "^0.7.1",
     "random-js": "^1.0.8",
+    "mongoose": "^4.3.6",
     "shortid": "^2.2.4"
   }
 }
