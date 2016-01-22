@@ -22,10 +22,13 @@
   },
   "homepage": "https://github.com/masteroes/SimpleMoney#readme",
   "dependencies": {
+    "body-parser": "^1.14.2",
     "express": "^4.13.3",
+    "merge-descriptors": "^1.0.1",
+    "mongoose": "^4.3.6",
+    "mongoose-unique-validator": "^0.6.2",
     "nodemailer": "^0.7.1",
     "random-js": "^1.0.8",
-    "mongoose": "^4.3.6",
     "shortid": "^2.2.4"
   }
 }
