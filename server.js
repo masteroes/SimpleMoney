@@ -6,15 +6,17 @@ var bodyParser = require('body-parser');
 var parseUrlencoded = bodyParser.urlencoded({extended: false});
 var mongoose = require('mongoose');
 app.use(express.static('public'));
+
+app.use( bodyParser.json());       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true}));
+
+mongoose.connect('mongodb://localhost:27017/SimpleMoney');
 app.get('/',function(req,res){
 	res.send('root url');
 });
 
-// DB Connection
-mongoose.connect('mongodb://localhost:27017/SimpleMoney');
-
-
-//Code to refer to transaction routes
+//Code to refer to transaction routes 
 app.use('/', routes);
 
 
@@ -47,7 +49,7 @@ var mymailOpts = {
    from: 'vndbluepi@gmail.com',
    to: 'neeraj.agg90@gmail.com',
    subject: 'testing notification',
-   text : 'Hello Testing notification'
+   text : 'Hello Testing notificatiokn'
 }
 
 console.log("Sending mail");

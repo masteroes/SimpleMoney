@@ -1,38 +1,44 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var router = express.Router();
-var Schema = mongoose.Schema;
 
+var transaction = require('../models/transaction');
 
-var transactionSchema = new Schema({
-	date: Date,
-	accountHolder: String,
-	description: String,
-	amount: Number,
-	type: String
+router.get('/transactions', function(req, res) {
+	mongoose.model('transactions').find(function(err,transaction){
+	res.send(transaction);	
+});
 });
 
-var transaction = mongoose.model('transaction', transactionSchema);
-
-router.get('/transaction', function(req, res) {
-	console.log('Getting transaction details');
-
-});
-
-router.get('/transaction/:txId', function(req, res) {
-	console.log('Getting transaction details for'+ txId);
-
-
-});
-router.get('/transaction/:accId/:type', function(req, res) {
-	
-
-});
+router.post('/create', function(req, res) {
+console.log(req.body);
+	var tx = new transaction(req.body);
+		tx.save(function(err,transactions){
+			if(err)
+				res.send(err);
+			else
+				res.send(transactions);
+		});
+	});
 
 
 router.post('/sendmoney', function(req, res) {
-	("Just sent money"); 
+console.log(req.body);
+//get from
+//get to
+//create 2 transactions using create remote method
 
+var tx1 = new transaction(req.body);
+		tx1.save(function(err,transactions){
+			if(err)
+				res.send(err);
+			else
+				res.send(transactions);
+		});
 });
 
+	
 module.exports = router;
+
+
+
