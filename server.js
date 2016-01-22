@@ -1,6 +1,6 @@
 var express=require('express');
 var app=express();
-var routes = require('./routes/transaction');
+var tansactionroutes = require('./routes/transaction');
 var login = require('./modules/login/login.js');
 var bodyParser = require('body-parser');
 var parseUrlencoded = bodyParser.urlencoded({extended: false});
@@ -17,7 +17,7 @@ app.get('/',function(req,res){
 });
 
 //Code to refer to transaction routes 
-app.use('/', routes);
+app.use('/', tansactionroutes);
 
 
 var listener=app.listen(process.env.APP_PORT || 4000,function(){
