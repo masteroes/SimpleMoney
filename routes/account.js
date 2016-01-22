@@ -2,11 +2,11 @@ var shortid = require('shortid');
 var express=require('express');
 var mongoose=require('mongoose');
 var bodyParser = require('body-parser');
-var AccountModel=require('./model/accountModel.js');
-var UserModel=require('./model/users.js');
-var notifyMail=require('./util/util.js');
+var AccountModel=require('../models/accountModel.js');
+//var UserModel=require('../models/users.js');
+var notifyMail=require('../util/util.js');
 var app=express();
-mongoose.connect('mongodb://localhost/mydb');
+//mongoose.connect('mongodb://localhost/mydb');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -59,6 +59,4 @@ app.post('/users/:userId/accounts',function(req,res){
 		});
     }
 });
-app.listen(process.env.PORT||3000,function(){
-	console.log('Example app listening on port 3000!');
-});
+module.exports = app;
