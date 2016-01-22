@@ -1,13 +1,13 @@
 var express = require('express');
 var app = express();
-var mongoose = requires('mongoose');
+var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
 var transactionSchema = new Schema({
-	date: new Date(),
-	to: Number,
-	from: Number,
+	date: Date,
+	accountHolder: String,
+	description: String,
 	amount: Number,
 	type: String
 });
