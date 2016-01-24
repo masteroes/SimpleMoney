@@ -6,8 +6,8 @@ exports.sendMail = function (opts) {
    smtpTransport = nodemailer.createTransport('SMTP', {
       service: 'Gmail',
       auth: {
-         user: 'vndbluepi@gmail.com',
-         pass: '<urpass>'
+         user: 'loopbacktraining@gmail.com',
+         pass: 'loopbacktraining1234'
       }
 });
 
